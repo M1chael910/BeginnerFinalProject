@@ -8,15 +8,29 @@
 
 import UIKit
 
-class SpecificCategoryVC: UIViewController {
-
+class SpecificCategoryVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    @IBOutlet weak var productCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        productCollectionView.backgroundColor = .clear
+        productCollectionView.dataSource = self
+        productCollectionView.delegate = self
     }
     
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let productCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as? ProductCell {
+            
+            return productCell
+        }
+        return ProductCell()
+    }
     
     
 

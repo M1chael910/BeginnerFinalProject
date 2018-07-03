@@ -8,4 +8,16 @@
 
 import Foundation
 
+struct Product {
+    
+    private(set) public var title: String
+    private(set) public var imageName: String
+    private(set) public var description: String
+    
+    init(title: String, imageName: String, description: String) {
+        self.description = description
+        self.title = title
+        self.imageName = imageName
+    }
+}
 

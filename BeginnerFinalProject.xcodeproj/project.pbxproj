@@ -21,6 +21,7 @@
 		2429AE8620E6F532006708C5 /* SpecificCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2429AE8520E6F532006708C5 /* SpecificCategoryVC.swift */; };
 		2429AE8820E6F54E006708C5 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2429AE8720E6F54E006708C5 /* DetailVC.swift */; };
 		2429AE8E20E6F5D1006708C5 /* BackToAppBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2429AE8D20E6F5D1006708C5 /* BackToAppBtn.swift */; };
+		243D3F9720EB3A4500EFB97A /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243D3F9620EB3A4500EFB97A /* ProductCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		2429AE8520E6F532006708C5 /* SpecificCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificCategoryVC.swift; sourceTree = "<group>"; };
 		2429AE8720E6F54E006708C5 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		2429AE8D20E6F5D1006708C5 /* BackToAppBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackToAppBtn.swift; sourceTree = "<group>"; };
+		243D3F9620EB3A4500EFB97A /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				2429AE8D20E6F5D1006708C5 /* BackToAppBtn.swift */,
 				241F398320E73C0100662057 /* CategoryCell.swift */,
+				243D3F9620EB3A4500EFB97A /* ProductCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				2429AE8820E6F54E006708C5 /* DetailVC.swift in Sources */,
 				2429AE8E20E6F5D1006708C5 /* BackToAppBtn.swift in Sources */,
 				241F397E20E7363400662057 /* Category.swift in Sources */,
+				243D3F9720EB3A4500EFB97A /* ProductCell.swift in Sources */,
 				241F398220E73B6D00662057 /* DataService.swift in Sources */,
 				241F398420E73C0100662057 /* CategoryCell.swift in Sources */,
 			);

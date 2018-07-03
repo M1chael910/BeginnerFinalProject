@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -75,23 +76,83 @@
             </objects>
             <point key="canvasLocation" x="3088.8000000000002" y="-704.79760119940033"/>
         </scene>
-        <!--App InfoVC-->
+        <!--Specific CategoryVC-->
         <scene sceneID="Uzs-AZ-V0x">
             <objects>
-                <viewController id="T4o-NA-HNn" customClass="AppInfoVC" customModule="BeginnerFinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="T4o-NA-HNn" customClass="SpecificCategoryVC" customModule="BeginnerFinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tXS-xx-pcV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="campingBG" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9iO-sg-wjm">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camping Gear" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKs-wk-PiM">
+                                <rect key="frame" x="62" y="64" width="251" height="117.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="43"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Sd-Nd-FWZ">
+                                <rect key="frame" x="0.0" y="181.5" width="375" height="485.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="HNn-21-mxy"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xKv-Rx-uZ9">
+                                    <size key="itemSize" width="180" height="142"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="keP-u0-fIR" customClass="ProductCell" customModule="BeginnerFinalProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="142"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="142"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sleepingBag" translatesAutoresizingMaskIntoConstraints="NO" id="bXe-C5-ZHi">
+                                                    <rect key="frame" x="23.5" y="14.5" width="133" height="113"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="bXe-C5-ZHi" firstAttribute="centerX" secondItem="keP-u0-fIR" secondAttribute="centerX" id="a2Z-qm-RHf"/>
+                                            <constraint firstItem="bXe-C5-ZHi" firstAttribute="centerY" secondItem="keP-u0-fIR" secondAttribute="centerY" id="lCx-cE-V3n"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="productImage" destination="bXe-C5-ZHi" id="xVN-dL-6t6"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BjD-vi-mUX" firstAttribute="trailing" secondItem="bKs-wk-PiM" secondAttribute="trailing" constant="62" id="3a4-mg-Lci"/>
+                            <constraint firstItem="9iO-sg-wjm" firstAttribute="leading" secondItem="BjD-vi-mUX" secondAttribute="leading" id="45R-Du-6zN"/>
+                            <constraint firstItem="BjD-vi-mUX" firstAttribute="trailing" secondItem="2Sd-Nd-FWZ" secondAttribute="trailing" id="IGt-mo-70I"/>
+                            <constraint firstItem="bKs-wk-PiM" firstAttribute="top" secondItem="BjD-vi-mUX" secondAttribute="top" id="Mo1-iC-p9m"/>
+                            <constraint firstItem="BjD-vi-mUX" firstAttribute="bottom" secondItem="2Sd-Nd-FWZ" secondAttribute="bottom" id="POD-4M-lNc"/>
+                            <constraint firstItem="2Sd-Nd-FWZ" firstAttribute="leading" secondItem="BjD-vi-mUX" secondAttribute="leading" id="SBF-Sl-ypn"/>
+                            <constraint firstItem="BjD-vi-mUX" firstAttribute="trailing" secondItem="9iO-sg-wjm" secondAttribute="trailing" id="fDL-7n-tlS"/>
+                            <constraint firstItem="2Sd-Nd-FWZ" firstAttribute="top" secondItem="bKs-wk-PiM" secondAttribute="bottom" id="fLz-gf-y4Y"/>
+                            <constraint firstItem="BjD-vi-mUX" firstAttribute="bottom" secondItem="9iO-sg-wjm" secondAttribute="bottom" id="gN7-Yf-Bjg"/>
+                            <constraint firstItem="9iO-sg-wjm" firstAttribute="top" secondItem="BjD-vi-mUX" secondAttribute="top" id="su2-9T-j55"/>
+                            <constraint firstItem="bKs-wk-PiM" firstAttribute="leading" secondItem="BjD-vi-mUX" secondAttribute="leading" constant="62" id="vI2-1D-AcK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BjD-vi-mUX"/>
                     </view>
                     <connections>
+                        <outlet property="productCollectionView" destination="2Sd-Nd-FWZ" id="gnq-DZ-Wba"/>
                         <segue destination="Rpp-Pg-hg2" kind="show" id="JUS-Su-Hp2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hsm-OM-Zmx" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3908" y="116.49175412293854"/>
+            <point key="canvasLocation" x="3924" y="116"/>
         </scene>
         <!--All CategoriesVC-->
         <scene sceneID="grD-4K-EjO">
@@ -105,31 +166,45 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="123" id="0Sy-LD-D3D" customClass="CategoryCell" customModule="BeginnerFinalProject" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="123" id="0Sy-LD-D3D" customClass="CategoryCell" customModule="BeginnerFinalProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="123"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Sy-LD-D3D" id="ncy-2Y-58C">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="122.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backpackingBG" translatesAutoresizingMaskIntoConstraints="NO" id="jWL-bT-sKc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="122.5"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flO-Gx-F79">
-                                                    <rect key="frame" x="166" y="51" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hiking" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flO-Gx-F79">
+                                                    <rect key="frame" x="111.5" y="29" width="152" height="64.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="47"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hikingBG" translatesAutoresizingMaskIntoConstraints="NO" id="jWL-bT-sKc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="122.5"/>
+                                                    <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIt-9e-Vt5">
+                                                    <rect key="frame" x="128" y="30.5" width="119.5" height="61.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="45"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="jWL-bT-sKc" firstAttribute="top" secondItem="ncy-2Y-58C" secondAttribute="top" id="0jT-tT-KHZ"/>
+                                                <constraint firstItem="flO-Gx-F79" firstAttribute="centerX" secondItem="ncy-2Y-58C" secondAttribute="centerX" id="60r-lt-TIu"/>
+                                                <constraint firstItem="gIt-9e-Vt5" firstAttribute="centerY" secondItem="ncy-2Y-58C" secondAttribute="centerY" id="HCD-zi-8Br"/>
+                                                <constraint firstItem="flO-Gx-F79" firstAttribute="centerY" secondItem="ncy-2Y-58C" secondAttribute="centerY" id="hVZ-Qh-TIO"/>
                                                 <constraint firstAttribute="trailing" secondItem="jWL-bT-sKc" secondAttribute="trailing" id="r1f-ad-Pwg"/>
                                                 <constraint firstAttribute="bottom" secondItem="jWL-bT-sKc" secondAttribute="bottom" id="wD0-on-IrT"/>
                                                 <constraint firstItem="jWL-bT-sKc" firstAttribute="leading" secondItem="ncy-2Y-58C" secondAttribute="leading" id="wa5-0j-O80"/>
+                                                <constraint firstItem="gIt-9e-Vt5" firstAttribute="centerX" secondItem="ncy-2Y-58C" secondAttribute="centerX" id="z9F-6c-2Cz"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="categoryImage" destination="jWL-bT-sKc" id="hI9-Th-nzb"/>
+                                            <outlet property="categoryLabel" destination="gIt-9e-Vt5" id="Nwf-bo-Sud"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -160,12 +235,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2gq-gj-IDD" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3090.4000000000001" y="115.59220389805098"/>
+            <point key="canvasLocation" x="3060" y="116"/>
         </scene>
-        <!--App InfoVC-->
+        <!--DetailVC-->
         <scene sceneID="lFd-DH-3CA">
             <objects>
-                <viewController id="Rpp-Pg-hg2" customClass="AppInfoVC" customModule="BeginnerFinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Rpp-Pg-hg2" customClass="DetailVC" customModule="BeginnerFinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8vM-M3-eQf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -201,8 +276,10 @@
     </scenes>
     <resources>
         <image name="backBtn" width="14" height="23"/>
-        <image name="backpackingBG" width="1346" height="897"/>
+        <image name="campingBG" width="1346" height="897"/>
         <image name="devslopesLogo" width="214" height="144"/>
+        <image name="hikingBG" width="1346" height="897"/>
         <image name="infoBtn" width="21" height="21"/>
+        <image name="sleepingBag" width="133" height="113"/>
     </resources>
 </document>

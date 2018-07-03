@@ -13,8 +13,24 @@ class DataService {
     static let instance = DataService()
     
     
+    private let categories = [
+        Category(title: "HIKING", imageName: "hikingBG"),
+        Category(title: "CAMPING", imageName: "campingBG"),
+        Category(title: "DIVING", imageName: "divingBG"),
+        Category(title: "RV LIFE", imageName: "rvBG"),
+        Category(title: "FISHING", imageName: "fishingBG"),
+        Category(title: "BACKPACKS", imageName: "backpackingBG")
+    ]
+
+    private let campingGear = [
+        Product(title: "Sleeping Bag", imageName: "sleepingBag", description: "its a sleeping bag man"),
+        Product(title: "<#T##String#>", imageName: "<#T##String#>", description: "")
     
+    ]
     
+    func getCategories() -> [Category] {
+        return categories
+    }
     
     
 }
