@@ -24,6 +24,10 @@ class ProductCell: UICollectionViewCell {
     }
     
     
+    func updateView(product: Product) {
+        productImage.image = UIImage(named: product.imageName)
+    }
+    
     func setupProductCell() {
         layer.cornerRadius = 10.0
         backgroundColor = .white

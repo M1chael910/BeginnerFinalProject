@@ -17,9 +17,7 @@ class AllCategoriesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         super.viewDidLoad()
         categoriesTableView.delegate = self
         categoriesTableView.dataSource = self
-        // Do any additional setup after loading the view.
     }
-    
     @IBAction func infoBtnPressed(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: "InfoVC", sender: self)
     }
@@ -34,7 +32,19 @@ class AllCategoriesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let category = DataService.instance.getCategories()[indexPath.row]
+        performSegue(withIdentifier: "SpecificCategoryVC", sender: category)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let specificCategoryVC = segue.destination as? SpecificCategoryVC {
+            let barBtn = UIBarButtonItem()
+            barBtn.title = ""
+            navigationItem.backBarButtonItem = barBtn
+            assert(sender as? Category != nil)
+            specificCategoryVC.initProducts(category: sender as! Category)
+        }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

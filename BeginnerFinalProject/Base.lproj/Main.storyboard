@@ -152,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hsm-OM-Zmx" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3924" y="116"/>
+            <point key="canvasLocation" x="3741" y="116"/>
         </scene>
         <!--All CategoriesVC-->
         <scene sceneID="grD-4K-EjO">
@@ -227,7 +227,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="categoriesTableView" destination="1Jm-S7-eHa" id="MGX-g1-9Vm"/>
-                        <segue destination="T4o-NA-HNn" kind="show" id="tsn-yA-wCW"/>
+                        <segue destination="T4o-NA-HNn" kind="show" identifier="SpecificCategoryVC" id="tsn-yA-wCW"/>
                         <segue destination="BYZ-38-t0r" kind="popoverPresentation" identifier="InfoVC" popoverAnchorView="1Jm-S7-eHa" id="9jD-Pz-Owg">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
                         </segue>
@@ -250,7 +250,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vcV-fE-5GW" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4676" y="115.59220389805098"/>
+            <point key="canvasLocation" x="4378" y="116"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KPY-GM-7t2">
@@ -271,7 +271,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PNW-KY-ktY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2151.1999999999998" y="115.59220389805098"/>
+            <point key="canvasLocation" x="2361" y="116"/>
         </scene>
     </scenes>
     <resources>

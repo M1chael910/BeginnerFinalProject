@@ -12,22 +12,29 @@ class SpecificCategoryVC: UIViewController, UICollectionViewDelegate, UICollecti
     
     @IBOutlet weak var productCollectionView: UICollectionView!
     
+    private(set) public var products = [Product]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         productCollectionView.backgroundColor = .clear
         productCollectionView.dataSource = self
         productCollectionView.delegate = self
     }
+    func initProducts(category: Category) {
+      products = DataService.instance.getProducts(forCategoryTitle: category.title)
+      navigationItem.title = category.title
+    }
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return DataService.instance.getCampingGear().count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let productCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as? ProductCell {
-            
-            return productCell
+        let product = products[indexPath.row]
+        productCell.updateView(product: product)
+        return productCell
         }
         return ProductCell()
     }
