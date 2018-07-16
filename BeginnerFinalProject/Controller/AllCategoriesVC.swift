@@ -42,7 +42,6 @@ class AllCategoriesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
             let barBtn = UIBarButtonItem()
             barBtn.title = ""
             navigationItem.backBarButtonItem = barBtn
-            assert(sender as? Category != nil)
             specificCategoryVC.initProducts(category: sender as! Category)
         }
     }
@@ -60,6 +59,4 @@ class AllCategoriesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         return CategoryCell()
     }
     
-
-
 }

@@ -27,18 +27,22 @@ class SpecificCategoryVC: UIViewController, UICollectionViewDelegate, UICollecti
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return DataService.instance.getCampingGear().count
+        return products.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let productCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as? ProductCell {
-        let product = products[indexPath.row]
-        productCell.updateView(product: product)
-        return productCell
-        }
+            if products.count != 0 {
+                let product = products[indexPath.row]
+                productCell.updateView(product: product)
+                return productCell
+            } else {
+                collectionView.isHidden = true
+            }
+    }
         return ProductCell()
     }
-    
+
     
 
     /*
