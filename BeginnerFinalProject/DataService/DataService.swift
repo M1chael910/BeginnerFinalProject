@@ -26,50 +26,25 @@ class DataService {
         Product(title: "Sleeping Bag", imageName: "sleepingBag", description: "its a sleeping bag man"),
         Product(title: "", imageName: "foodCooler", description: ""),
         Product(title: "Blabla", imageName: "pupTent", description: "whatever"),
-        Product(title: "", imageName: "", description: ""),
-        Product(title: "", imageName: "", description: "")
+        Product(title: "", imageName: "tacticalKnife", description: ""),
+        Product(title: "", imageName: "paracordBracelet", description: ""),
+        Product(title: "", imageName: "campingStove", description: "")
     ]
     
     private let example: [Product] = [
-    Product(title: "", imageName: "", description: ""),
-    Product(title: "etet", imageName: "etete", description: "etetet")
+
     ]
     private let example1: [Product] = [
-        Product(title: "", imageName: "", description: ""),
-        Product(title: "", imageName: "", description: ""),
-        Product(title: "", imageName: "", description: ""),
-        Product(title: "", imageName: "", description: ""),
-        Product(title: "", imageName: "", description: ""),
-        Product(title: "etete", imageName: "etetet", description: "etetet")
+
     ]
     private let example2: [Product] = [
-        Product(title: "", imageName: "", description: ""),
-        Product(title: "", imageName: "", description: ""),
-        Product(title: "", imageName: "", description: ""),
-        Product(title: "", imageName: "", description: ""),
-        Product(title: "", imageName: "", description: ""),
-        Product(title: "", imageName: "", description: ""),
-        Product(title: "", imageName: "", description: ""),
-        Product(title: "etetete", imageName: "eteteete", description: "etetee")
+
     ]
     private let example3: [Product] = [
-        Product(title: "", imageName: "", description: ""),
-        Product(title: "", imageName: "", description: ""),
-        Product(title: "", imageName: "", description: ""),
-        Product(title: "", imageName: "", description: ""),
-        Product(title: "", imageName: "", description: ""),
-        Product(title: "", imageName: "", description: ""),
-        Product(title: "etetete", imageName: "tetete", description: "etetee")
+
     ]
     private let example4: [Product] = [
-        Product(title: "", imageName: "", description: ""),
-        Product(title: "", imageName: "", description: ""),
-        Product(title: "", imageName: "", description: ""),
-        Product(title: "", imageName: "", description: ""),
-        Product(title: "", imageName: "", description: ""),
-        Product(title: "", imageName: "", description: ""),
-        Product(title: "", imageName: "", description: ""),
-        Product(title: "etetete", imageName: "etetete", description: "etetete")
+
     ]
     
     func getCategories() -> [Category] {

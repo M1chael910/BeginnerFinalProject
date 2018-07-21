@@ -9,7 +9,13 @@
 import UIKit
 
 class DetailVC: UIViewController {
-
+    
+    
+    @IBOutlet weak var productImageView: UIImageView!
+    
+    @IBOutlet weak var productDescriptionTextView: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

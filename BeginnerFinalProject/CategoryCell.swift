@@ -19,3 +19,5 @@ class CategoryCell: UITableViewCell {
     }
     
 }
+
+

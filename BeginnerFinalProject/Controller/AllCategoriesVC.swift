@@ -17,6 +17,8 @@ class AllCategoriesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         super.viewDidLoad()
         categoriesTableView.delegate = self
         categoriesTableView.dataSource = self
+        
+        navigationItem.title = "TRAILguide"
     }
     @IBAction func infoBtnPressed(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: "InfoVC", sender: self)
