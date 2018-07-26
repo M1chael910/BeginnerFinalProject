@@ -10,6 +10,7 @@ import UIKit
 
 class DetailVC: UIViewController {
     
+    var currentProduct: Product!
     
     @IBOutlet weak var productImageView: UIImageView!
     
@@ -18,11 +19,14 @@ class DetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupProduct()
     }
     
-
+    func setupProduct() {
+        productImageView.image = UIImage(named: currentProduct.imageName)
+        productDescriptionTextView.text  = currentProduct.description
+        productDescriptionTextView.backgroundColor = .clear
+    }
     /*
     // MARK: - Navigation
 

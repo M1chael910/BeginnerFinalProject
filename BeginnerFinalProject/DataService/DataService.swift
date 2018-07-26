@@ -26,13 +26,13 @@ class DataService {
         Product(title: "Sleeping Bag", imageName: "sleepingBag", description: "its a sleeping bag man"),
         Product(title: "", imageName: "foodCooler", description: ""),
         Product(title: "Blabla", imageName: "pupTent", description: "whatever"),
-        Product(title: "", imageName: "tacticalKnife", description: ""),
-        Product(title: "", imageName: "paracordBracelet", description: ""),
-        Product(title: "", imageName: "campingStove", description: "")
+        Product(title: "", imageName: "tacticalKnife", description: "dadsdadwa"),
+        Product(title: "", imageName: "paracordBracelet", description: "asdawdasd"),
+        Product(title: "", imageName: "campingStove", description: "awdadwddawd")
     ]
     
     private let example: [Product] = [
-
+        
     ]
     private let example1: [Product] = [
 
